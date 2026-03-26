@@ -1,0 +1,1779 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!--<!DOCTYPE rfc SYSTEM "rfc4748.dtd"> -->
+    <!DOCTYPE rfc SYSTEM 'rfc2629.dtd' [ 
+    <!ENTITY rfc2119 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.2119.xml'>  
+    <!ENTITY rfc2629 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.2629.xml'> 
+    <!ENTITY rfc3688 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.3688.xml'> 
+    <!ENTITY rfc4271 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.4271.xml'> 
+    <!ENTITY rfc4541 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.4541.xml'> 
+    <!ENTITY rfc4875 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.4875.xml'>    
+    <!ENTITY rfc4915 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.4915.xml'>    
+    <!ENTITY rfc5015 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.5015.xml'>    
+    <!ENTITY rfc5120 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.5120.xml'>    
+    <!ENTITY rfc6020 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.6020.xml'>   
+    <!ENTITY rfc6241 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.6241.xml'>
+    <!ENTITY rfc6242 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.6242.xml'>
+    <!ENTITY rfc6388 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.6388.xml'> 
+    <!ENTITY rfc6513 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.6513.xml'> 
+    <!ENTITY rfc6514 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.6514.xml'> 
+    <!ENTITY rfc7348 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.7348.xml'>
+    <!ENTITY rfc7432 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.7432.xml'>    
+    <!ENTITY rfc7637 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.7637.xml'> 
+    <!ENTITY rfc7716 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.7716.xml'> 
+    <!ENTITY rfc7761 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.7761.xml'>  
+    <!ENTITY rfc7950 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.7950.xml'>    
+    <!ENTITY rfc7988 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.7988.xml'>     
+    <!ENTITY rfc8040 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.8040.xml'>    
+    <!ENTITY rfc8174 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.8174.xml'>    
+    <!ENTITY rfc8279 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.8279.xml'> 
+    <!ENTITY rfc8294 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.8294.xml'> 
+    <!ENTITY rfc8296 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.8296.xml'> 
+    <!ENTITY rfc8340 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.8340.xml'>   
+    <!ENTITY rfc8341 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.8341.xml'>   
+    <!ENTITY rfc8342 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.8342.xml'>   
+    <!ENTITY rfc8349 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.8349.xml'>  
+    <!ENTITY rfc8407 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.8407.xml'>       
+    <!ENTITY rfc8446 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.8446.xml'>   
+    <!ENTITY rfc8556 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.8556.xml'> 
+    <!ENTITY rfc8639 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.8639.xml'>   
+    <!ENTITY rfc8641 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.8641.xml'>   
+    <!ENTITY rfc8776 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.8776.xml'>  
+    <!ENTITY rfc8926 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml/reference.RFC.8926.xml'> 
+    <!ENTITY rfc9000 PUBLIC '' 'https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9000.xml'>
+    <!ENTITY rfc9128 PUBLIC '' 'https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9128.xml'>
+    <!ENTITY rfc9179 PUBLIC '' 'https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9179.xml'>
+    <!ENTITY rfc9262 PUBLIC '' 'https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9262.xml'>
+    <!ENTITY rfc9350 PUBLIC '' 'https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9350.xml'>
+    <!ENTITY rfc9502 PUBLIC '' 'https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9502.xml'>
+    <!ENTITY rfc9524 PUBLIC '' 'https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9524.xml'>
+    <!ENTITY rfc9572 PUBLIC '' 'https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9572.xml'>
+    <!ENTITY rfc9624 PUBLIC '' 'https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9624.xml'>
+    <!ENTITY rfc9658 PUBLIC '' 'https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9658.xml'>
+    <!ENTITY rfc9911 PUBLIC '' 'https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9911.xml'>
+    <!ENTITY I-D.ietf-bier-bierin6 PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-bier-bierin6.xml'>
+    <!ENTITY I-D.ietf-bier-bier-yang PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-bier-bier-yang.xml'>
+    <!ENTITY I-D.ietf-bier-te-yang PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-bier-te-yang.xml'>
+    <!ENTITY I-D.ietf-bier-mld PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-bier-mld.xml'>
+    <!ENTITY I-D.ietf-bier-pim-signaling PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-bier-pim-signaling.xml'>
+    <!ENTITY I-D.ietf-pim-sr-p2mp-policy PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-pim-sr-p2mp-policy.xml'>
+    <!ENTITY I-D.ietf-lsr-flex-soft-dataplane PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-lsr-flex-soft-dataplane.xml'>    
+    <!ENTITY I-D.xz-pim-flex-algo PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml3/reference.I-D.xz-pim-flex-algo.xml'>    
+    <!ENTITY I-D.ietf-mboned-redundant-ingress-failover PUBLIC '' 'http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-mboned-redundant-ingress-failover.xml'>
+        ]>
+
+<?xml-stylesheet type='text/xsl' href='rfc2629.xslt' ?>     
+
+<?rfc toc="yes"?>
+<?rfc symrefs="yes"?>
+<?rfc sortrefs="yes"?>
+<?rfc disable-output-escaping="yes"?>
+
+<rfc category="std"  docName="draft-ietf-mboned-multicast-yang-model-15"
+     ipr="trust200902">
+  <!-- ***** FRONT MATTER ***** -->
+  <front>
+    <title abbrev="Multicast YANG Data Model">Multicast YANG Data Model</title>
+    
+    <author fullname="Zheng Zhang" initials="Z" surname="Zhang">
+      <organization>ZTE Corporation</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city></city>
+          <region></region>
+          <code></code>
+          <country>China</country>
+        </postal>
+        <email>zhang.zheng@zte.com.cn</email>
+      </address>
+    </author>
+    
+     <author fullname="Cui(Linda) Wang" initials="C" surname="Wang">
+      <organization>Individual</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city></city>
+          <region></region>
+          <code></code>
+          <country>Australia</country>
+        </postal>
+        <email>lindawangjoy@gmail.com</email>
+      </address>
+    </author>
+
+     <author fullname="Ying Cheng" initials="Y" surname="Cheng">
+      <organization>China Unicom</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Beijing</city>
+          <region></region>
+          <code></code>
+          <country>China</country>
+        </postal>
+        <email>chengying10@chinaunicom.cn</email>
+      </address>
+    </author>
+
+    <author fullname="Xufeng Liu" initials="X" surname="Liu">
+      <organization>Alef Edge</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city></city>
+          <code></code>
+          <country></country>
+        </postal>
+        <email>xufeng.liu.ietf@gmail.com</email>
+      </address>
+    </author>
+
+     <author fullname="Mahesh Sivakumar" initials="M" surname="Sivakumar">
+      <organization>Juniper networks</organization>
+      <address>
+        <postal>
+          <street>1133 Innovation Way</street>
+          <city>Sunnyvale, CALIFORNIA 94089</city>
+          <region></region>
+          <code></code>
+          <country>USA</country>
+        </postal>
+        <email>sivakumar.mahesh@gmail.com</email>
+      </address>
+    </author>
+
+    <date year="2026"/> 
+    <area>Ops</area>
+    <workgroup>MBONED WG</workgroup>
+    <keyword>MULTICAST, YANG, MODEL</keyword>
+    <abstract>
+     <t>This document provides a generic multicast YANG data model that shows the relevant technologies or protocols used by multicast flows.
+        It provides a management view for network administrators to obtain information about multicast services.</t>
+    </abstract>
+  </front>
+
+  <!-- ***** MIDDLE MATTER ***** -->
+
+  <middle>
+  
+  <section title="Introduction">
+    <t>Currently, there are many multicast protocol YANG models, such as PIM (Protocol Independent Multicast), MLD (Multicast Listener Discovery), 
+    and BIER (Bit Index Explicit Replication) and so on. 
+     But all these models are distributed in different working groups as separate files and focus on the protocol itself. 
+     Furthermore, they cannot describe a high-level multicast service required by network operators. </t>
+
+    <t>This document provides a general and all-round multicast model, which shows the relevant technologies or protocols used by multicast flows.
+    It provides a management view for network administrators to obtain information about multicast services.</t>
+     
+    <t>This document does not define any specific protocol model, instead, 
+     it depends on many existing multicast protocol models and relates several multicast information together to fulfill multicast service. </t>
+
+      <t>This document defines one NMDA-compatible [RFC8342] YANG 1.1 [RFC7950] data model for the management of multicast service.
+    This model can be used along with other multicast
+    YANG models such as PIM <xref target="RFC9128"/>, which are not covered in this document.
+      </t>
+      
+    <section title="Terminology">
+    <t>The terminology for describing YANG data models is found in 
+    <xref target="RFC6020"/> and <xref target="RFC7950"/>, including:</t>
+    <t>
+  <list style="symbols">
+    <t>data model</t>
+    <t>data node</t>
+    <t>identity</t>
+    <t>module</t>
+    </list>
+    </t>
+    
+    <t>The following abbreviations are used in this document and the defined
+    model:</t>
+  <t>BIER: Bit Index Explicit Replication <xref target="RFC8279"/>.</t>
+  <t>BIER-TE: Traffic Engineering for Bit Index Explicit Replication <xref target="RFC9262"/>.</t>
+  <t>MLD: Multicast Listener Discovery <xref target="I-D.ietf-bier-mld"/>.</t>
+  <t>MLDP: Label Distribution Protocol Extensions for Point-to-Multipoint and Multipoint-to-Multipoint Label Switched Paths <xref target="RFC6388"/>.</t>
+  <t>MVPN: Multicast in MPLS/BGP IP VPNs <xref target="RFC6513"/>.</t>
+  <t>P2MP-TE: Point-to-Multipoint Traffic Engineering <xref target="RFC4875"/>.</t>
+  <t>PIM: Protocol Independent Multicast <xref target="RFC7761"/>.</t>
+  <t>SR-P2MP: Segment Routing Point-to-Multipoint <xref target="I-D.ietf-pim-sr-p2mp-policy"/>.</t>
+    </section>
+
+    <section title="Conventions Used in This Document">
+    <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
+   "OPTIONAL" in this document are to be interpreted as described in
+   BCP 14 <xref target="RFC2119"/> <xref target="RFC8174"/> 
+   when, and only when, they appear in all capitals, as shown here.</t>
+    </section>
+    
+    <section title="Tree Diagrams">
+    <t>Tree diagrams used in this document follow the notation defined in 
+       <xref target="RFC8340"/>.</t>
+    </section>
+
+    <section title="Prefixes in Data Node Names">
+    <t>In this document, names of data nodes, actions, and other data model
+   objects are often used without a prefix, as long as it is clear from
+   the context in which YANG module each name is defined.  Otherwise,
+   names are prefixed using the standard prefix associated with the
+   corresponding YANG module, as shown in Table 1.</t>
+   
+  <texttable anchor="TABLE_1" title="">
+
+     <ttcol align="left">Prefix</ttcol>
+     <ttcol align="left">YANG module</ttcol>
+     <ttcol align="left">Reference</ttcol>
+
+     <c>inet</c>
+     <c>ietf-inet-types</c>
+     <c><xref target="RFC9911"/></c>
+     
+     <c>rt-types</c>
+     <c>ietf-routing-types</c>
+     <c><xref target="RFC8294"/></c>
+
+     <c>rt</c>
+     <c>ietf-routing</c>
+     <c><xref target="RFC8349"/></c>
+
+     <c>te-types</c>
+     <c>ietf-te-types</c>
+     <c><xref target="RFC8776"/></c>
+
+     <c>bier</c>
+     <c>ietf-bier</c>
+     <c><xref target="I-D.ietf-bier-bier-yang"/></c>
+
+    </texttable>
+   </section> 
+  </section>  
+           
+  <section title="Design of the Data Model">
+  
+    <section title="Scope of Model">
+  
+    <t>This model can be used to configure and manage the multicast service.
+   The operational state data can be retrieved by this
+   model.  The subscription and push mechanism defined in <xref target="RFC8639"/> and
+   <xref target="RFC8641"/> can be implemented by the user to subscribe to
+   notifications on the data nodes in this model.</t>
+
+    <t>The model contains all the basic configuration parameters to configure the multicast service.  
+   Depending on the implementation choices, some systems
+   may not allow some of the advanced parameters to be configurable.
+   The occasionally implemented parameters are modeled as optional
+   features in this model.  This model can be extended, and it has been
+   structured in a way that such extensions can be conveniently made.</t>
+
+<section title="Usage of Multicast Model">
+    <t>This multicast YANG data model is mainly used by the management tools run by the network operators,  
+     in order to manage, monitor and debug the network resources that are used to deliver multicast service. 
+     This model is used for gathering data from the network as well. </t>
+     
+                                                               
+    <figure anchor="fig1" title="Usage of Multicast Model">
+           <artwork><![CDATA[       
+           
+               +------------------------+                    
+               |    Multicast Model     |                    
+               +------------------------+                    
+                 |        |          |                                   
+                 |        |          |                       
+                 |  +---------+  +----------+                
+                 |  | EMS/NMS |  |Controller|                
+                 |  +---------+  +----------+                
+                 |        |          |                       
+                 |        |          |                       
+        +------------------------------------------------+   
+        |               Network Element1.....N           |   
+        +------------------------------------------------+   
+                            
+          ]]></artwork></figure>
+                                    
+    <t> <xref target="fig1"/> illustrates example use cases for this multicast model. 
+     Network operators can use this model in a controller which is responsible to implement specific multicast 
+     flows with specific protocols and work with the corresponding
+     protocols' model to configure the network elements through NETCONF/RESTCONF/CLI. Or network operators can use this model
+     to the EMS (Element Management System)/ NMS (Network Management System) to manage or configure the network elements directly. </t>
+
+    <t>On the other hand, when the network
+     elements detect failure or some other changes, the network devices can send the affected multicast flows and the associated 
+     signaling/ transport information to the controller. Then the controller/ EMS/NMS can respond immediately due to the 
+     failure. Such as the changing of the failure signaling protocol to another one, as well as transport protocol.
+     The controller can distribute new model for the flows to the network nodes.  
+     For example, a multicast flow is forwarded by BIER transport, but BIER may no longer be active, 
+     and the flow needs to be forwarded via PIM. 
+     The controller can send a model with the same multicast flow information and the associated transport protocol (set to PIM) 
+     to the ingress node.</t>
+
+     <t>Specifically, in section 2, it provides a human readability of the whole multicast network through diagram, 
+     which frames different multicast components and correlates them in a readable fashion. 
+     Then, based on this diagram, there is instantiated and detailed YANG model in Section 3. </t>
+         
+     <t>The usage of this model is flexible. The multicast-keys indicate the flow characters. 
+     The flow can be L3 multicast flow, 
+     or L2 flow which is also called BUM (Broadcast, Unknown unicast, Multicast) flow in EVPN (<xref target="RFC7432"/>) deployment.</t> 
+     
+     <t>The Route Distinguisher, source-address and group-address of L3 multicast flow are the multicast flow keys. 
+     For example, when the group-address is set, and the source-address is set to * or a specific value, this is (*,G) or (S,G) analogous.  
+     In addition to the source-address and group-address, when vpn-rd is also set, this is MVPN use case.</t> 
+     
+    <t>
+    <list style="symbols">
+    <t>When the controller manages all the ingress and egress routers for the flow, the model is sent with flow characters, 
+    ingress and egress nodes information to the ingress and egress nodes. 
+    Then the ingress and egress nodes can work without any other dynamic signaling protocols.</t>
+     
+     <t>When the controller manages the ingress nodes only for the flow, the model is sent with the flow characters to the ingress nodes. 
+     The dynamic signaling protocol can be set or not. 
+     If the dynamic signaling protocol is set, the nodes use the protocol to signal the flow information with other nodes. 
+     If the dynamic signaling protocol is not set, the nodes use the local running dynamic signaling protocol to signal the flow information.</t>
+     
+     <t>When the transport protocol is set in the model, the nodes encapsulate the flow according to the transport protocol. 
+     When the transport protocol is not set in the model, the nodes use the local configured transport protocol for encapsulation.</t>
+     
+     <t>More than one ingress node for a multicast flow can be set in the model. 
+     In this situation, two or more ingress nodes are used for a multicast flow forwarding, the ingress routers can be backup for each other. 
+     More information can be found in <xref target="I-D.ietf-mboned-redundant-ingress-failover"/>.</t>
+     
+     <t>The controller can also use this model to get information from the ingress node. 
+     When the received information is inconsistent with expectations, 
+     for example, a multicast flow should be forwarded through BIER transmission, 
+     but the received information shows that the multicast flow is forwarded by PIM, 
+     there may be some management inconsistencies.</t>
+     </list>
+     </t>
+     
+    <section title="Example"> 
+    <figure anchor="fig2" title="Example">
+           <artwork><![CDATA[       
+                            +------------+
+                            |            +---------------------------+
+             +--------------+ Controller |                           |
+             |              |            +-----------+               |
+             |              +------------+           |               |
+             |                                       |               |
+             |     +-----------------------------+   |               |
+             |     |                             |   |               |
+             |     |                      +------+---+--+            |
+             |     |                      |Egress router+--+ Receiver|
+             |     |                      +------+------+            |
+         +---+-----+----+                        |                   |
+Source +-|Ingress router|     BIER domain        |                   |
+         +---------+----+                        |                   |
+                   |                      +------+------+            |
+                   |                      |Egress router+--+ Receiver|
+                   |                      +------+----+-+            |
+                   |                             |    |              |
+                   +-----------------------------+    +--------------+
+          ]]></artwork></figure>
+     
+     <t>The network administrator can use the multicast model and associated models to deploy the multicast service. 
+     For example, suppose that the flow for a multicast service is 233.252.0.0/24, 
+     the flow should be forwarded by BIER <xref target="RFC8279"/> with MPLS encapsulation <xref target="RFC8296"/>.</t>
+     <t>In this model, the corresponding group-address that is in multicast-keys 
+     is set to 233.252.0.0/24, the transport technology is set to BIER. 
+     The model is sent to every edge router from the controller.
+     If the BIER transport layer has not been built in the network, the multicast YANG model may work with the BIER YANG 
+     model that is defined in <xref target="I-D.ietf-bier-bier-yang"/>. 
+     After the BIER transport layer is built,
+     the ingress router encapsulates the multicast flow with BIER header and sends it into the network. 
+     Intermediate routers forward the flows to all the egress nodes by BIER forwarding.</t>
+     <t>Another example for this figure is, the controller can act as the BIER overlay only. 
+     The routers in the domain build BIER forwarding plane beforehand. 
+     The controller sends the multicast group-address and/or the source-address to the edge routers in BIER domain only, 
+     without signaling and transport set in the model.  
+     Then the ingres router can encapsulate the multicast flow with BIER encapsulation automatically.</t>
+     </section>
+    </section>
+   </section>
+   
+   <section title="Specification"> 
+   <t>This model imports and augments ietf-routing YANG model defined in
+   <xref target="RFC8349"/>.  The container "multicast-service" is the top-level container in this
+   data model.  The container is expected to enable multicast service
+   functionality.</t>
+   
+   <t>The YANG data model defined in this document conforms to the Network
+   Management Datastore Architecture (NMDA) <xref target="RFC8342"/>.  The operational
+   state data is combined with the associated configuration data in the
+   same hierarchy <xref target="RFC8407"/>.</t>
+   </section>
+ 
+   <section title="Overview"> 
+    <figure  align="center">
+            <artwork align="center"><![CDATA[           
+module: ietf-multicast
+  +--rw multicast-service
+     +--rw multicast-flow* [vpn-rd source-address group-address]
+        +--rw vpn-rd            rt-types:route-distinguisher
+        +--rw source-address    ip-multicast-source-address
+        +--rw group-address     rt-types:ip-multicast-group-address
+        +--rw upstream
+        |  +--rw neighbor* [neighbor-address]
+        |     +--rw neighbor-address    inet:ip-address
+        |     +--rw vni-type?           identityref
+        |     +--rw signaling?          identityref
+        |     +--rw (protocol-type)?
+        |        +--:(evpn)
+        |        +--:(mld)
+        |        +--:(mld-snooping)
+        |        +--:(mvpn)
+        |        +--:(pim)
+        +--rw downstream* [signaling transport]
+           +--rw signaling                   identityref
+           +--rw (protocol-type)?
+           |  +--:(evpn)
+           |  +--:(mld)
+           |  +--:(mld-snooping)
+           |  +--:(mvpn)
+           |  +--:(pim)
+           +--rw transport                   identityref
+           +--rw (transport-tech-type)?
+           |  +--:(bier) {bier}?
+           |  |  +--rw bier* [sub-domain]
+           |  |     +--rw sub-domain         uint16
+           |  |     +--rw tad* [mt-id fa-number data-plane]
+           |  |     |  +--rw mt-id         uint16
+           |  |     |  +--rw fa-number     uint8
+           |  |     |  +--rw data-plane    uint8
+           |  |     +--rw bitstringlength?   uint16
+           |  |     +--rw bier-encap-type?   identityref
+           |  +--:(bier-te) {bier-te}?
+           |  |  +--rw bitstring* [name]
+           |  |     +--rw name           string
+           |  |     +--rw bier-te-adj* [adj-id]
+           |  |        +--rw adj-id    uint16
+           |  +--:(mldp) {mldp}?
+           |  |  +--rw mt-id?                uint16
+           |  |  +--rw fa-number?            uint8
+           |  +--:(rsvp-te-p2mp) {p2mp-te}?
+           |  |  +--rw template-name?
+           |  |  |       te-types:te-template-name
+           |  |  +--rw static-tunnel-name?   string
+           |  +--:(pim) {pim}?
+           |  |  +--rw source-address?
+           |  |  |       ip-multicast-source-address
+           |  |  +--rw group-address
+           |  |  |       rt-types:ip-multicast-group-address
+           |  |  +--rw bidir {bidir}?
+           |  |  +--rw tad* [mt-id fa-number data-plane]
+           |  |     +--rw mt-id         uint16
+           |  |     +--rw fa-number     uint8
+           |  |     +--rw data-plane    uint8
+           |  +--:(ir-tunnel) {ir-tunnel}?
+           |  |  +--rw ir-tunnel-type?       uint8
+           |  +--:(sr-p2mp) {sr-p2mp}?
+           |  +--:(native)
+           +--rw neighbor* [neighbor-address]
+              +--rw neighbor-address    inet:ip-address
+              +--rw vni-type?           identityref
+
+  notifications:
+    +---n ingress-egress-event
+       +--ro event-type?       identityref
+       +--ro multicast-flow* [vpn-rd source-address group-address]
+          +--ro vpn-rd            rt-types:route-distinguisher
+          +--ro source-address    ip-multicast-source-address
+          +--ro group-address     rt-types:ip-multicast-group-address
+          +--ro upstream
+          |  +--ro neighbor* [neighbor-address]
+          |     +--ro neighbor-address    inet:ip-address
+          |     +--ro vni-type?           identityref
+          |     +--ro signaling?          identityref
+          |     +--ro (protocol-type)?
+          |        +--:(evpn)
+          |        +--:(mld)
+          |        +--:(mld-snooping)
+          |        +--:(mvpn)
+          |        +--:(pim)
+          +--ro downstream* [signaling transport]
+             +--ro signaling                   identityref
+             +--ro (protocol-type)?
+             |  +--:(evpn)
+             |  +--:(mld)
+             |  +--:(mld-snooping)
+             |  +--:(mvpn)
+             |  +--:(pim)
+             +--ro transport                   identityref
+             +--ro (transport-tech-type)?
+             |  +--:(bier) {bier}?
+             |  |  +--ro bier* [sub-domain]
+             |  |     +--ro sub-domain         uint16
+             |  |     +--ro tad* [mt-id fa-number data-plane]
+             |  |     |  +--ro mt-id         uint16
+             |  |     |  +--ro fa-number     uint8
+             |  |     |  +--ro data-plane    uint8
+             |  |     +--ro bitstringlength?   uint16
+             |  |     +--ro bier-encap-type?   identityref
+             |  +--:(bier-te) {bier-te}?
+             |  |  +--ro bitstring* [name]
+             |  |     +--ro name           string
+             |  |     +--ro bier-te-adj* [adj-id]
+             |  |        +--ro adj-id    uint16
+             |  +--:(mldp) {mldp}?
+             |  |  +--ro mt-id?                uint16
+             |  |  +--ro fa-number?            uint8
+             |  +--:(rsvp-te-p2mp) {p2mp-te}?
+             |  |  +--ro template-name?
+             |  |  |       te-types:te-template-name
+             |  |  +--ro static-tunnel-name?   string
+             |  +--:(pim) {pim}?
+             |  |  +--ro source-address?
+             |  |  |       ip-multicast-source-address
+             |  |  +--ro group-address
+             |  |  |       rt-types:ip-multicast-group-address
+             |  |  +--ro bidir {bidir}?
+             |  |  +--ro tad* [mt-id fa-number data-plane]
+             |  |     +--ro mt-id         uint16
+             |  |     +--ro fa-number     uint8
+             |  |     +--ro data-plane    uint8
+             |  +--:(ir-tunnel) {ir-tunnel}?
+             |  |  +--ro ir-tunnel-type?       uint8
+             |  +--:(sr-p2mp) {sr-p2mp}?
+             |  +--:(native)
+             +--ro neighbor* [neighbor-address]
+                +--ro neighbor-address    inet:ip-address
+                +--ro vni-type?           identityref
+            ]]></artwork>
+       <postamble></postamble>
+      </figure>
+     </section>
+     
+    <section title="Multicast YANG data model Configuration"> 
+    <t>This model can work with other protocol data models to provide multicast service.</t>
+    
+      <t> This model includes multicast service keys, the multicast service signaling, 
+    the transport layer information. Multicast keys include the 
+    features of multicast flow, such as (vpn-rd, multicast source and multicast group) information. 
+    In data center network, for fine-grained to gather the nodes belonging to the same virtual
+     network, there may need VNI-related information to assist.</t>
+
+     <t> Multicast service signaling defines the multicast flows information, and 
+     the nodes (ingress and/or egress) information. If the transport layer is BIER, 
+     there may define BIER information including 
+     (Subdomain, tad (multi-topology ID, flex algo number, data-plane), encapsulation-type).   
+     When the nodes (ingress and/or egress) information are not defined, 
+     there may need dynamic multicast signaling technology, such as MLD or MVPN, 
+     to collect these nodes information. 
+     The model can be sent to the ingress nodes only. 
+     For example, regardless of the dynamic signaling protocol used, 
+     the ingress node advertises the multicast flow information to all neighbors in the BIER domain.
+     When the ingress node receives the signaling from some egress nodes, the ingress node sends the flow to the signaling egress nodes.</t>
+     
+     <t>Multicast transport layer defines the type of transport technologies that can 
+     be used to forward multicast flow, 
+     including BIER forwarding type, MPLS forwarding type, or PIM forwarding type and 
+     so on. 
+     The multicast YANG data model can be used with the corresponding protocol model to 
+     indicate the transport technology used for the multicast flow.</t>
+
+    <t>The configuration modeling branch is composed of the keys, upstream (ingress) nodes, downstream (egress) nodes, 
+    signaling protocols and transport technologies.</t>
+    </section>
+
+    <section title="Multicast YANG data model State"> 
+    <t>Multicast model states are the same with the configuration. 
+    In most cases, network administrators can use this model to obtain multicast flows and related protocol information 
+    such as signaling protocols and transport technologies.</t>
+    </section>
+    
+    <section title="Multicast YANG data model Notification"> 
+    <t>The defined Notifications include the events of ingress or egress nodes. Like ingress node failure, 
+    signaling/ transport module loading/ unloading. And the potential failure about 
+    some multicast flows and associated signaling/ transport technologies.</t>
+   </section> 
+     
+  </section>
+
+    <section title="Multicast YANG data Model"> 
+    <t>This module references <xref target="RFC4541"/>, <xref target="RFC4875"/>, <xref target="RFC4915"/>,
+  <xref target="RFC5015"/>, <xref target="RFC5120"/>, 
+  <xref target="RFC6388"/>, <xref target="RFC6513"/>, <xref target="RFC6514"/>, 
+  <xref target="RFC7348"/>, <xref target="RFC7432"/>, <xref target="RFC7637"/>, <xref target="RFC7716"/>, 
+  <xref target="RFC7761"/>, <xref target="RFC7988"/>, 
+  <xref target="RFC8174"/>, <xref target="RFC8279"/>, <xref target="RFC8294"/>, <xref target="RFC8296"/>,
+  <xref target="RFC8349"/>, <xref target="RFC8556"/>, <xref target="RFC8776"/>, <xref target="RFC8926"/>, 
+  <xref target="RFC9179"/>, <xref target="RFC9262"/>, <xref target="RFC9350"/>, <xref target="RFC9502"/>, 
+  <xref target="RFC9524"/>, <xref target="RFC9572"/>, <xref target="RFC9624"/>, <xref target="RFC9658"/>, 
+  <xref target="RFC9911"/>, 
+  <xref target="I-D.ietf-bier-bier-yang"/>,
+  <xref target="I-D.ietf-bier-mld"/>,
+  <xref target="I-D.ietf-bier-bierin6"/>,
+  <xref target="I-D.ietf-bier-pim-signaling"/>, 
+  <xref target="I-D.ietf-bier-te-yang"/>,
+  <xref target="I-D.ietf-lsr-flex-soft-dataplane"/>,
+  <xref target="I-D.ietf-pim-sr-p2mp-policy"/>,  
+  <xref target="I-D.xz-pim-flex-algo"/>. 
+  </t>
+  
+     <figure  align="center">
+            <artwork align="center"><![CDATA[           
+<CODE BEGINS> file "ietf-multicast@2026-01-06.yang"
+module ietf-multicast {
+  yang-version 1.1;
+  namespace "urn:ietf:params:xml:ns:yang:ietf-multicast";
+  prefix ietf-multicast;
+
+  import ietf-inet-types {
+    prefix inet;
+    reference
+      "RFC 9911: Common YANG Data Types";
+  }
+  import ietf-routing-types {
+    prefix rt-types;
+    reference
+      "RFC 8294: Common YANG Data Types for the Routing Area";
+  }
+  import ietf-routing {
+    prefix rt;
+    reference
+      "RFC 8349: A YANG Data Model for Routing Management
+                 (NMDA Version)";
+  }
+  import ietf-te-types {
+    prefix te-types;
+    reference
+      "RFC 8776: Common YANG Data Types for Traffic Engineering";
+  }
+  import ietf-bier {
+    prefix bier;
+    reference
+      "I-D.ietf-bier-bier-yang: YANG Data Model for BIER Protocol";
+  }
+
+  organization
+    " IETF MBONED (MBONE Deployment) Working Group";
+  contact
+    "WG List:  <mailto:mboned@ietf.org>
+
+     Editor:   Zheng Zhang
+               <mailto:zhang.zheng@zte.com.cn>
+     Editor:   Cui Wang
+               <mailto:lindawangjoy@gmail.com>
+     Editor:   Ying Cheng
+               <mailto:chengying10@chinaunicom.cn>
+     Editor:   Xufeng Liu
+               <mailto:xufeng.liu.ietf@gmail.com>
+     Editor:   Mahesh Sivakumar
+               <mailto:sivakumar.mahesh@gmail.com>
+    ";
+
+  // RFC Ed.: replace XXXX with actual RFC number and remove
+  // this note
+
+  description
+    "The module defines the YANG definitions for multicast service
+     management. This model can be used to send multicast flow
+     information to or retrieve multicast flow information from
+     devices, including upstream and downstream node information,
+     possible signaling protocols, and the multicast transmission
+     protocol that actually carries the multicast flow.
+
+     Copyright (c) 2026 IETF Trust and the persons identified as
+     authors of the code.  All rights reserved.
+
+     Redistribution and use in source and binary forms, with or
+     without modification, is permitted pursuant to, and subject to
+     the license terms contained in, the Revised BSD License set
+     forth in Section 4.c of the IETF Trust's Legal Provisions
+     Relating to IETF Documents
+     (https://trustee.ietf.org/license-info).
+
+     This version of this YANG module is part of RFC 9719
+     (https://www.rfc-editor.org/info/rfc9719); see the RFC itself
+     for full legal notices.
+
+     The key words 'MUST', 'MUST NOT', 'REQUIRED', 'SHALL', 'SHALL
+     NOT', 'SHOULD', 'SHOULD NOT', 'RECOMMENDED', 'NOT RECOMMENDED',
+     'MAY', and 'OPTIONAL' in this document are to be interpreted as
+     described in BCP 14 (RFC 2119) (RFC 8174) when, and only when,
+     they appear in all capitals, as shown here.";
+
+  revision 2026-01-06 {
+    description
+      "Initial revision.";
+    reference
+      "RFC XXXX: A YANG Data Model for multicast service management
+       YANG.";
+  }
+
+  /*
+   *feature
+   */
+
+  feature bier {
+    description
+      "Cooperation with BIER technology.";
+    reference
+      "RFC 8279: Multicast Using Bit Index Explicit Replication
+         (BIER)";
+  }
+
+  feature bier-te {
+    description
+      "Cooperation with BIER-TE technology.";
+    reference
+      "RFC 9262: Tree Engineering for Bit Index Explicit Replication
+         (BIER-TE)";
+  }
+
+  feature sr-p2mp {
+    description
+      "Cooperation with multipoint Segment Routing replication
+       technology.";
+    reference
+      "RFC 9524: Segment Routing Replication for Multipoint
+         Service Delivery";
+  }
+
+  feature ir-tunnel {
+    description
+      "Cooperation with Ingress Replication tunnel technology.";
+    reference
+      "RFC 7988: Ingress Replication Tunnels in Multicast VPN";
+  }
+
+  feature mldp {
+    description
+      "Cooperation with MLDP technology.";
+    reference
+      "RFC 6388: Label Distribution Protocol Extensions
+         for Point-to-Multipoint and Multipoint-to-Multipoint
+         Label Switched Paths";
+  }
+
+  feature p2mp-te {
+    description
+      "Cooperation with RSVP TE P2MP technology.";
+    reference
+      "RFC 4875: Extensions to Resource Reservation Protocol -
+        Traffic Engineering (RSVP-TE) for Point-to-Multipoint TE
+        Label Switched Paths (LSPs)";
+  }
+
+  feature pim {
+    description
+      "Cooperation with PIM technology.";
+    reference
+      "RFC 7761: Protocol Independent Multicast - Sparse Mode
+       (PIM-SM): Protocol Specification (Revised)";
+  }
+
+  feature bidir {
+    description
+      "Cooperation with BIDIR-PIM technology.";
+    reference
+      "RFC 5015: Bidirectional Protocol Independent Multicast
+       (BIDIR-PIM)";
+  }
+
+  /*
+   *typedef
+   */
+
+  typedef ip-multicast-source-address {
+    type union {
+      type enumeration {
+        enum * {
+          description
+            "Any source address.";
+        }
+      }
+      type inet:ipv4-address;
+      type inet:ipv6-address;
+    }
+    description
+      "Multicast source IP address type.";
+  }
+
+  /*
+   * Identities
+   */
+
+  identity multicast-service {
+    base rt:control-plane-protocol;
+    description
+      "Identity for the multicast model.";
+  }
+
+  identity dynamic-signaling-type {
+    description
+      "Base identity for the dynamic signaling type of multicast
+       service technology.";
+  }
+
+  identity transport-type {
+    description
+      "Identity for the multicast transport technology.";
+  }
+
+  identity tunnel-encap-type {
+    description
+      "Base identity for the type of multicast flow tunnel
+       encapsulation.";
+  }
+
+  identity tunnel-encap-vxlan {
+    base tunnel-encap-type;
+    description
+      "The VXLAN encapsulation is used for flow encapsulation.";
+    reference
+      "RFC 7348: Virtual eXtensible Local Area Network (VXLAN):
+        A Framework for Overlaying Virtualized Layer 2 Networks
+        over Layer 3 Networks";
+  }
+
+  identity tunnel-encap-nvgre {
+    base tunnel-encap-type;
+    description
+      "The NVGRE encapsulation is used for flow encapsulation.";
+    reference
+      "RFC 7637: NVGRE: Network Virtualization Using Generic
+        Routing Encapsulation";
+  }
+
+  identity tunnel-encap-geneve {
+    base tunnel-encap-type;
+    description
+      "The GENEVE encapsulation is used for flow encapsulation.";
+    reference
+      "RFC 8926: Geneve: Generic Network Virtualization
+        Encapsulation";
+  }
+
+  identity signaling-pim {
+    base dynamic-signaling-type;
+    description
+      "Using PIM as multicast service signaling technology.";
+    reference
+      "I-D.ietf-bier-pim-signaling: PIM Signaling Through BIER
+        Core";
+  }
+
+  identity mld {
+    base dynamic-signaling-type;
+    description
+      "Using MLD as multicast service signaling technology.";
+    reference
+      "I-D.ietf-bier-mld: BIER Ingress Multicast Flow Overlay
+        using Multicast Listener Discovery Protocols";
+  }
+
+  identity mld-snooping {
+    base dynamic-signaling-type;
+    description
+      "Using MLD-snooping as multicast service signaling 
+       technology.";
+    reference
+      "RFC 4541: Considerations for Internet Group Management
+        Protocol (IGMP) and Multicast Listener
+        Discovery (MLD) Snooping Switches";
+  }
+
+  identity evpn {
+    base dynamic-signaling-type;
+    description
+      "Using EVPN as multicast service signaling technology.";
+    reference
+      "RFC 7432: BGP MPLS-Based Ethernet VPN
+       RFC 9572: Updates on EVPN BUM Procedures
+       RFC 9624: EVPN Broadcast, Unknown Unicast, or Multicast
+        (BUM) Using Bit Index Explicit Replication (BIER)";
+  }
+
+  identity mvpn {
+    base dynamic-signaling-type;
+    description
+      "Using MVPN as multicast service signaling technology.";
+    reference
+      "RFC 6513: Multicast in MPLS/BGP IP VPNs
+       RFC 7716: Global Table Multicast with BGP Multicast VPN
+        (BGP-MVPN) Procedures
+       RFC 8556: Multicast VPN Using Bit Index Explicit 
+        Replication (BIER)";
+  }
+
+  identity bier {
+    base transport-type;
+    description
+      "Using BIER as multicast transport technology.";
+    reference
+      "RFC 8279: Multicast Using Bit Index Explicit Replication
+        (BIER)";
+  }
+
+  identity bier-te {
+    base transport-type;
+    description
+      "Using BIER-TE as multicast transport technology.";
+    reference
+      "RFC 9262: Traffic Engineering for Bit Index Explicit
+        Replication (BIER-TE)";
+  }
+
+  identity mldp {
+    base transport-type;
+    description
+      "Using mLDP as multicast transport technology.";
+    reference
+      "RFC 6388: Label Distribution Protocol Extensions
+        for Point-to-Multipoint and Multipoint-to-Multipoint
+        Label Switched Paths";
+  }
+
+  identity rsvp-te-p2mp {
+    base transport-type;
+    description
+      "Using P2MP TE as multicast transport technology.";
+    reference
+      "RFC 4875: Extensions to Resource Reservation Protocol
+        - Traffic Engineering (RSVP-TE) for Point-to-Multipoint
+        TE Label Switched Paths (LSPs)";
+  }
+
+  identity sr-p2mp {
+    base transport-type;
+    description
+      "Using Segment Routing  as multicast transport technology.";
+    reference
+      "I-D.ietf-pim-sr-p2mp-policy:
+         Segment Routing Point-to-Multipoint Policy";
+  }
+
+  identity pim {
+    base transport-type;
+    description
+      "Using PIM as multicast transport technology.";
+    reference
+      "RFC 7761: Protocol Independent Multicast - Sparse Mode
+        (PIM-SM): Protocol Specification (Revised)";
+  }
+
+  identity bidir {
+    base transport-type;
+    description
+      "Using BIDIR-PIM as multicast transport technology.";
+    reference
+      "RFC 5015: Bidirectional Protocol Independent Multicast
+        (BIDIR-PIM)";
+  }
+
+  identity event-type {
+    description
+      "The events of the multicast service.";
+  }
+
+  identity event-up {
+    base event-type;
+    description
+      "The multicast service works.";
+  }
+
+  identity event-down {
+    base event-type;
+    description
+      "There is something wrong with upstream or downstream node,
+       and node can't work properlay.";
+  }
+
+  identity protocol-enabled {
+    base event-type;
+    description
+      "The protocol that is used for multicast flows have been
+       enabled.";
+  }
+
+  identity protocol-disabled {
+    base event-type;
+    description
+      "The protocol that is used by multicast flows have been
+       disabled.";
+  }
+
+  grouping general-multicast-key {
+    description
+      "The general multicast keys. They are used to differentiate
+       multicast service.";
+    leaf vpn-rd {
+      type rt-types:route-distinguisher;
+      description
+        "A Route Distinguisher is used to differentiate
+         routes from different MVPNs.";
+      reference
+        "RFC 8294: Common YANG Data Types for the Routing Area
+         RFC 6513: Multicast in MPLS/BGP IP VPNs";
+    }
+    leaf source-address {
+      type ip-multicast-source-address;
+      description
+        "The IP source address of the multicast flow. The
+         value set to * means that the receiver interests
+         in all source that relevant to one given group.";
+    }
+    leaf group-address {
+      type rt-types:ip-multicast-group-address;
+      mandatory true;
+      description
+        "The IP group address of multicast flow. This
+         type represents a version-neutral IP multicast group
+         address. The format of the textual representation
+         implies the IP version.";
+      reference
+        "RFC 8294: Common YANG Data Types for the Routing Area";
+    }
+  }
+
+  // multicast-key
+
+  grouping encap-type {
+    description
+      "The encapsulation type used for flow forwarding.
+       This encapsulation acts as the inner encapsulation,
+       as compare to the outer multicast-transport encapsulation.";
+    choice encap-type {
+      case mpls {
+        description
+          "The BIER forwarding depends on mpls.";
+        reference
+          "RFC 8296: Encapsulation for Bit Index Explicit
+            Replication (BIER) in MPLS and Non-MPLS Networks";
+      }
+      case eth {
+        description
+          "The BIER forwarding depends on ethernet.";
+        reference
+          "RFC 8296: Encapsulation for Bit Index Explicit
+            Replication (BIER) in MPLS and Non-MPLS Networks";
+      }
+      case ipv6 {
+        description
+          "The BIER forwarding depends on IPv6.";
+        reference
+          "I-D.ietf-bier-bierin6: BIER in IPv6 (BIERin6)";
+      }
+      description
+        "The encapsulation type in BIER.";
+    }
+  }
+
+  // encap-type
+
+  grouping bier-key {
+    description
+      "The key parameters set for BIER/BIER TE forwarding.";
+    reference
+      "RFC 8279: Multicast Using Bit Index Explicit Replication
+        (BIER).";
+    leaf sub-domain {
+      type uint16;
+      description
+        "The subdomain ID that the multicast flow belongs to.";
+    }
+    list tad {
+      key "mt-id fa-number data-plane";
+      description
+        "The associated Multi-Topology ID, Flex Algo number and
+            data plane type.";
+      leaf mt-id {
+        type uint16;
+        description
+          "The multi-topology ID that the multicast flow belongs 
+              to.";
+        reference
+          "RFC 4915: Multi-Topology (MT) Routing in OSPF
+           RFC 5120: M-ISIS: Multi Topology (MT) Routing in
+             Intermediate System to Intermediate Systems (IS-ISs)";
+      }
+      leaf fa-number {
+        type uint8;
+        description
+          "Flex-algo number, value between 128 and 255 inclusive.";
+        reference
+          "RFC 9350: IGP Flexible Algorithm";
+      }
+      leaf data-plane {
+        type uint8;
+        description
+          "Data plane type used for prefix calculation.";
+        reference
+          "RFC 9502: IGP Flexible Algorithm in IP Networks
+           I-D.ietf-lsr-flex-soft-dataplane: IGP Flex Soft
+            Dataplane";
+      }
+    }
+    leaf bitstringlength {
+      type uint16;
+      description
+        "The bitstringlength used by BIER forwarding.";
+    }
+    leaf bier-encap-type {
+      type identityref {
+        base bier:bier-encapsulation;
+      }
+      description
+        "The BIER encapsulation that can be used in either MPLS
+         networks or non-MPLS networks.";
+    }
+  }
+
+  grouping transport-tech {
+    description
+      "The transport technology selected for the multicast service.
+       For one specific multicast flow.
+       The same multicast flow may be forwarded using multiple
+       transport technologies as needed for management purposes.";
+    leaf transport {
+      type identityref {
+        base transport-type;
+      }
+      description
+        "The type of transport technology";
+    }
+    choice transport-tech-type {
+      description
+        "The type of transport technology";
+      case bier {
+        if-feature "bier";
+        list bier {
+          key "sub-domain";
+          description
+            "Using BIER as the transport technology.
+             The BIER technology is introduced in RFC8279.
+             The parameters are consistent with the definition in
+             BIER YANG data model.";
+          reference
+            "RFC 8296: Encapsulation for Bit Index Explicit
+               Replication (BIER) in MPLS and Non-MPLS Networks
+             I-D.ietf-bier-bier-yang:
+               YANG Data Model for BIER Protocol";
+          uses bier-key;
+        }
+      }
+      case bier-te {
+        if-feature "bier-te";
+        description
+          "Using BIER-TE as the transport technology.
+           The BIER-TE technology is introduced in RFC9262.
+           The parameters are consistent with the definition in
+           BIER and BIER TE YANG data model.";
+        reference
+          "RFC 9262: Tree Engineering for Bit Index Explicit
+             Replication (BIER-TE)
+           I-D.ietf-bier-bier-yang: YANG Data Model for BIER 
+             Protocol
+           I-D.ietf-bier-te-yang: A YANG data model for Traffic
+             Engineering for Bit Index Explicit Replication
+             (BIER-TE)";
+        list bitstring {
+          key "name";
+          leaf name {
+            type string;
+            description
+              "The name of the bitstring";
+          }
+          list bier-te-adj {
+            key "adj-id";
+            leaf adj-id {
+              type uint16;
+              description
+                "The link adjacency ID used for BIER TE 
+                 forwarding.";
+            }
+            description
+              "The adjacencies ID used for BIER TE bitstring
+               encapsulation.";
+          }
+          description
+            "The bitstring name and detail used for BIER TE
+             forwarding encapsulation. One or more bitstring 
+             can be used for backup path.";
+        }
+      }
+      case mldp {
+        if-feature "mldp";
+        description
+          "Using MLDP as the transport technology.";
+        reference
+          "RFC 6388: Label Distribution Protocol Extensions
+            for Point-to-Multipoint and Multipoint-to-Multipoint
+            Label Switched Paths
+           RFC 9658:
+            Multipoint LDP Extensions for Multi-Topology Routing";
+        leaf mt-id {
+          type uint16;
+          description
+            "The multi-topology ID that the multicast flow
+             belongs to.";
+          reference
+            "RFC 4915: Multi-Topology (MT) Routing in OSPF
+             RFC 5120: M-ISIS: Multi Topology (MT) Routing in
+             Intermediate System to Intermediate Systems (IS-ISs)";
+        }
+        leaf fa-number {
+          type uint8;
+          description
+            "Flex-algo number, value between 128 and 255 
+             inclusive.";
+          reference
+            "RFC 9350: IGP Flexible Algorithm";
+        }
+      }
+      case rsvp-te-p2mp {
+        if-feature "p2mp-te";
+        description
+          "Using RSVP TE P2MP as the transport technology.";
+        reference
+          "RFC 4875: Extensions to Resource Reservation Protocol - 
+             Traffic Engineering (RSVP-TE) for Point-to-Multipoint 
+             TE Label Switched Paths (LSPs)
+           RFC 8776: Common YANG Data Types for Traffic 
+             Engineering";
+        leaf template-name {
+          type te-types:te-template-name;
+          description
+            "A type for the name of a TE node template or TE link
+             template.";
+        }
+        leaf static-tunnel-name {
+          type string;
+          description
+            "Optional for statically specifying the P2MP TE tunnel
+             name.";
+        }
+      }
+      case pim {
+        if-feature "pim";
+        description
+          "Using PIM as the transport technology.
+           By setting the corresponding TAD (Multi-Topology ID,
+           FA number, and data plane type), constraint-based
+           multicast path establishment can be achieved.";
+        reference
+          "RFC 7761: Protocol Independent Multicast - Sparse Mode
+           (PIM-SM): Protocol Specification (Revised)
+           I-D: xz-pim-flex-algo: Multi-Topology in PIM";
+        leaf source-address {
+          type ip-multicast-source-address;
+          description
+            "The IP source address of the multicast flow. The
+             value set to * means that the receiver interests
+             in all source that relevant to one given group.";
+        }
+        leaf group-address {
+          type rt-types:ip-multicast-group-address;
+          mandatory true;
+          description
+            "The IP group address of multicast flow. This
+             type represents a version-neutral IP multicast group
+             address. The format of the textual representation
+             implies the IP version.";
+        }
+        container bidir {
+          if-feature "bidir";
+          description
+            "Using BIDIR-PIM as the transport technology.
+             When using the bidir technique, only the group address
+             needs to be considered.";
+          reference
+            "RFC 5015: Bidirectional Protocol Independent Multicast
+             (BIDIR-PIM)";
+        }
+        list tad {
+          key "mt-id fa-number data-plane";
+          description
+            "The associated Multi-Topology ID, Flex Algo number
+             and data plane type.";
+          leaf mt-id {
+            type uint16;
+            description
+              "The multi-topology ID that the multicast flow
+               belongs to.";
+            reference
+              "RFC 4915: Multi-Topology (MT) Routing in OSPF
+               RFC 5120: M-ISIS: Multi Topology (MT) Routing in
+                 Intermediate System to Intermediate Systems 
+                 (IS-ISs)";
+          }
+          leaf fa-number {
+            type uint8;
+            description
+              "Flex-algo number, value between 128 and 255 
+               inclusive.";
+            reference
+              "RFC 9350: IGP Flexible Algorithm";
+          }
+          leaf data-plane {
+            type uint8;
+            description
+              "Data plane type used for prefix calculation.";
+            reference
+              "RFC 9502: IGP Flexible Algorithm in IP Networks
+               I-D.ietf-lsr-flex-soft-dataplane:
+                 IGP Flex Soft Dataplane";
+          }
+        }
+      }
+      case ir-tunnel {
+        if-feature "ir-tunnel";
+        description
+          "Using IR (Ingress Replication) P-tunnel for MVPN as the
+           transport technology.";
+        reference
+          "RFC 7988: Ingress Replication Tunnels in Multicast VPN
+           RFC 6514: BGP Encodings and Procedures for Multicast 
+             in MPLS/BGP IP VPNs";
+        leaf ir-tunnel-type {
+          type uint8;
+          description
+            "The tunnel type used by MVPN ingress replication.";
+        }
+      }
+      case sr-p2mp {
+        if-feature "sr-p2mp";
+        description
+          "Using SR P2MP as the transport technology.
+           The ingress replication and the treesid
+           function will not be used at the same time.";
+        reference
+          "RFC 9524: Segment Routing Replication for Multipoint
+             Service Delivery
+           I-D.ietf-pim-sr-p2mp-policy: Segment Routing
+             Point-to-Multipoint Policy";
+      }
+      // sr-p2mp
+      case native {
+        description
+          "When this type is set, it indicates that it is a
+           normal multicast and no additional transport
+           forwarding is required.";
+      }
+    }
+  }
+
+  // transport
+  /*signaling*/
+
+  grouping signaling-tech {
+    leaf signaling {
+      type identityref {
+        base dynamic-signaling-type;
+      }
+      description
+        "The type of signaling technology";
+    }
+    choice protocol-type {
+      description
+        "The type of dynamic signaling technology.";
+      case evpn {
+        description
+          "EVPN technology is used for multicast service
+           signaling.
+           When BIER is used as a transport technology, there is
+           specific draft listed below that explain how to
+           perform signaling.";
+        reference
+          "RFC 7432: BGP MPLS-Based Ethernet VPN
+           RFC 9624: EVPN Broadcast, Unknown Unicast, or
+           Multicast (BUM) Using Bit Index Explicit Replication
+           (BIER)";
+      }
+      case mld {
+        description
+          "MLD/IGMP can be used as multicast service signaling.
+           When BIER is used as a transport technology, there is
+           specific draft listed below that explain how to
+           perform signaling.";
+        reference
+          "I-D:ietf-bier-mld: BIER Ingress Multicast Flow Overlay
+           using Multicast Listener Discovery Protocols";
+      }
+      case mld-snooping {
+        description
+          "MLD/IGMP snooping can be used as multicast service
+           signaling.";
+        reference
+          "RFC 4541:Considerations for Internet Group Management
+            Protocol (IGMP) and Multicast Listener Discovery (MLD)
+            Snooping Switches";
+      }
+      case mvpn {
+        description
+          "MVPN technology is used for multicast service signaling.
+           When BIER is used as a transport technology, there is
+           specific draft listed below that explain how to
+           perform signaling.";
+        reference
+          "RFC 6513: Multicast in MPLS/BGP IP VPNs
+           RFC 7716: Global Table Multicast with BGP Multicast VPN
+            (BGP-MVPN) Procedures
+           RFC 8556: Multicast VPN Using Bit Index Explicit
+            Replication (BIER)";
+      }
+      case pim {
+        description
+          "PIM can be used as multicast service signaling.
+           When BIER is used as a transport technology, there is
+           specific draft listed below that explain how to
+           perform signaling.";
+        reference
+          "RFC 7761: Protocol Independent Multicast - Sparse Mode
+            (PIM-SM): Protocol Specification (Revised)
+           I-D.ietf-bier-pim-signaling: PIM Signaling Through BIER
+            Core";
+      }
+    }
+    description
+      "The dynamic signaling technologies and associated parameter
+       that may be set.";
+  }
+
+  // signaling-tech
+
+  container multicast-service {
+    description
+      "Multicast YANG data model. Includes the flow's key value,
+       upstream and downstream neighbors, and related information.";
+    list multicast-flow {
+      key "vpn-rd source-address group-address";
+      description
+        "Multicast flow information, including keys, upstream and
+         downstream nodes, possible signaling protocols, and
+         transport protocols.";
+      uses general-multicast-key;
+      container upstream {
+        description
+          "Upstream node neighbor information and the signaling
+           protocol used in the multicast flow.";
+        list neighbor {
+          key "neighbor-address";
+          description
+            "The IP address of the upstream node for the multicast
+             flow. It can be the ingress node for MVPN, EVPN, and
+             BIER.
+             In MVPN and EVPN, this is the address of the ingress 
+             PE; in BIER, it is the BFR prefix of the BFIR.
+             To achieve redundant ingress node protection, two or
+             more ingress nodes can exist.";
+          leaf neighbor-address {
+            type inet:ip-address;
+            description
+              "The IP address of the neighbor.";
+          }
+          leaf vni-type {
+            type identityref {
+              base tunnel-encap-type;
+            }
+            description
+              "The encapsulated type for the multicast flow,
+               it is used to carry the virtual network identifier
+               for the multicast service.
+               When this type is set, the associated vni-value
+               MUST be set.";
+          }
+          uses signaling-tech;
+        }
+      }
+      // upstream
+      list downstream {
+        key "signaling transport";
+        description
+          "Downstream node neighbor information, the signaling
+           protocol and transport protocol used by the multicast 
+           flow. For different downstream neighbor, different 
+           signaling and transport technology may be used.";
+        uses signaling-tech;
+        uses transport-tech;
+        list neighbor {
+          key "neighbor-address";
+          description
+            "The IP address of the downstream node for the multicast
+             flow. It can be the egress node for MVPN, EVPN, and
+             BIER.
+             In MVPN and EVPN, this is the address of the egress PE;
+             in BIER, it is the BFR prefix of the BFER.";
+          leaf neighbor-address {
+            type inet:ip-address;
+            description
+              "The IP address of the neighbor.";
+          }
+          leaf vni-type {
+            type identityref {
+              base tunnel-encap-type;
+            }
+            description
+              "The encapsulated type for the multicast flow,
+               it is used to carry the virtual network identifier
+               for the multicast service.
+               When this type is set, the associated vni-value
+               MUST be set.";
+          }
+        }
+      }
+      // downstream
+    }
+    // multicast-flow
+  }
+
+  /*Notifications*/
+
+  notification ingress-egress-event {
+    leaf event-type {
+      type identityref {
+        base event-type;
+      }
+      description
+        "The event type.";
+    }
+    list multicast-flow {
+      key "vpn-rd source-address group-address";
+      description
+        "Multicast flow information, including keys, upstream and
+         downstream nodes, possible signaling protocols, and
+         transport protocols.";
+      uses general-multicast-key;
+      container upstream {
+        description
+          "Upstream node neighbor information and the signaling
+           protocol used in the multicast flow.";
+        list neighbor {
+          key "neighbor-address";
+          description
+            "The IP address of the upstream node for the multicast
+             flow. It can be the ingress node for MVPN, EVPN, and
+             BIER.
+             In MVPN and EVPN, this is the address of the ingress 
+             PE; in BIER, it is the BFR prefix of the BFIR.
+             To achieve redundant ingress node protection, two or
+             more ingress nodes can exist.";
+          leaf neighbor-address {
+            type inet:ip-address;
+            description
+              "The IP address of the neighbor.";
+          }
+          leaf vni-type {
+            type identityref {
+              base tunnel-encap-type;
+            }
+            description
+              "The encapsulated type for the multicast flow,
+               it is used to carry the virtual network identifier
+               for the multicast service.
+               When this type is set, the associated vni-value
+               MUST be set.";
+          }
+          uses signaling-tech;
+        }
+      }
+      // upstream
+      list downstream {
+        key "signaling transport";
+        description
+          "Downstream node neighbor information, the signaling
+           protocol and transport protocol used by the multicast 
+           flow. For different downstream neighbor, different 
+           signaling and transport technology may be used.";
+        uses signaling-tech;
+        uses transport-tech;
+        list neighbor {
+          key "neighbor-address";
+          description
+            "The IP address of the downstream node for the multicast
+             flow. It can be the egress node for MVPN, EVPN, and
+             BIER.
+             In MVPN and EVPN, this is the address of the egress PE;
+             in BIER, it is the BFR prefix of the BFER.";
+          leaf neighbor-address {
+            type inet:ip-address;
+            description
+              "The IP address of the neighbor.";
+          }
+          leaf vni-type {
+            type identityref {
+              base tunnel-encap-type;
+            }
+            description
+              "The encapsulated type for the multicast flow,
+               it is used to carry the virtual network identifier
+               for the multicast service.
+               When this type is set, the associated vni-value
+               MUST be set.";
+          }
+        }
+      }
+      // downstream
+    }
+    // multicast-flow
+    description
+      "Notification events for the upstream or downstream nodes.
+       Like node failure, signaling/ transport module
+       loading/ unloading. And the potential failure about some
+       multicast flows and associated
+       signaling/ transport technologies.";
+  }
+}
+<CODE ENDS>
+            ]]></artwork>
+       <postamble></postamble>
+      </figure>
+    </section>
+    
+   <section title="Security Considerations"> 
+     <t>The "Multicast-service" YANG module defines a data model that is
+designed to be accessed via YANG-based management protocols, such as
+NETCONF <xref target="RFC6241"/> or RESTCONF <xref target="RFC8040"/>. 
+These protocols have to
+use a secure transport layer (e.g., SSH <xref target="RFC6242"/>, TLS <xref target="RFC8446"/>, and
+QUIC <xref target="RFC9000"/>) and have to use mutual authentication.</t>
+
+     <t>The Network Configuration Access Control Model (NACM) <xref target="RFC8341"/>
+provides the means to restrict access for particular NETCONF or
+RESTCONF users to a preconfigured subset of all available NETCONF or
+RESTCONF protocol operations and content.</t>
+
+     <t>There are a number of data nodes defined in this YANG module that are
+writable/creatable/deletable (i.e., "config true", which is the
+default).  These data nodes may be considered sensitive or vulnerable
+in some network environments.  Write operations (e.g., edit-config)
+to these data nodes without proper protection can have a negative
+effect on network operations.  The following subtrees and data nodes
+have particular sensitivities/vulnerabilities:</t>
+    
+    <t>multicast-service
+      <list style="simblos">
+      <t>These data nodes in this model specifies the configuration for the multicast service
+      at the top level. Modifying the configuration can cause multicast service 
+      to be deleted or reconstructed.</t>
+      </list>
+   </t>
+    
+    <t>Some of the readable data nodes in this YANG module may be considered
+sensitive or vulnerable in some network environments.  It is thus
+important to control read access (e.g., via get, get-config, or
+notification) to these data nodes. These are the subtrees and data
+nodes and their sensitivity/vulnerability:</t>
+   
+   <t>multicast-service
+      <list style="simblos">
+      <t>Unauthorized access to any data node of the above tree can
+   disclose the operational state information of multicast service on this
+   device.</t>
+      </list>
+   </t>
+   
+   <t>This YANG module uses groupings from other YANG modules that
+define nodes that may be considered sensitive or vulnerable
+in network environments. Refer to the Security Considerations
+of respective for information as to which nodes may
+be considered sensitive or vulnerable in network environments.</t>
+
+   <t>The YANG module defines a set of identities, types, and
+groupings. These nodes are intended to be reused by other YANG
+modules. The module by itself does not expose any data nodes that
+are writable, data nodes that contain read-only state, or RPCs.
+As such, there are no additional security issues related to
+the YANG module that need to be considered.</t>
+
+   <t>Modules that use the groupings that are defined in this document
+should identify the corresponding security considerations. For
+example, reusing some of these groupings will expose privacy-related
+information (e.g., 'transport-type').</t>
+
+   </section>
+
+   <section title="IANA Considerations"> 
+    <t>RFC Ed.: Please replace all occurrences of 'XXXX' with the
+   actual RFC number (and remove this note).</t>
+  
+    <t> IANA is requested to register the following URI in the "ns"
+   subregistry within the "IETF XML Registry" <xref target="RFC3688"/>:</t>
+
+       <t>URI: urn:ietf:params:xml:ns:yang:ietf-multicast</t>
+       <t>Registrant Contact: The IESG</t>
+       <t>XML: N/A, the requested URI is an XML namespace.</t>
+
+   <t>IANA is requested to register the following YANG module in the "YANG
+   Module Names" subregistry <xref target="RFC6020"/> within the "YANG Parameters"
+   registry.</t>
+
+       <t>name: ietf-multicast</t>
+       <t>Maintained by IANA?  N</t>
+       <t>namespace: urn:ietf:params:xml:ns:yang:ietf-multicast</t>
+       <t>prefix: ietf-multicast</t>
+       <t>reference: RFC XXXX</t>
+   </section>
+  
+   <section title="Acknowledgements"> 
+    <t>The authors would like to thank Stig Venaas, Jake Holland, Min Gu, Gyan Mishra, 
+    Jeffrey Zhang for their valuable comments and suggestions.</t>
+   </section>
+
+  </middle>
+
+  <!--  *****BACK MATTER ***** -->
+
+  <back>
+  
+  <references title='Normative References'>
+  &rfc2119;
+  &rfc3688;
+  &rfc6020;
+  &rfc6241;
+  &rfc6242;
+  &rfc6513;
+  &rfc6514;  
+  &rfc7950;
+  &rfc8040;  
+  &rfc8340;
+  &rfc8341;
+  &rfc8342;
+  &rfc8446;
+  &rfc8641;
+  &rfc9000;
+  </references>
+
+  <references title='Informative References'>
+  &rfc4541;
+  &rfc4875;
+  &rfc4915;  
+  &rfc5015; 
+  &rfc5120;
+  &rfc6388; 
+  &rfc7348;
+  &rfc7432;
+  &rfc7637;
+  &rfc7716;
+  &rfc7761;
+  &rfc7988;
+  &rfc8174;
+  &rfc8279;
+  &rfc8294;
+  &rfc8296;
+  &rfc8349; 
+  &rfc8407;
+  &rfc8556;
+  &rfc8639;
+  &rfc8776;
+  &rfc8926;
+  &rfc9128; 
+  &rfc9179; 
+  &rfc9262; 
+  &rfc9350; 
+  &rfc9502; 
+  &rfc9524;
+  &rfc9572;
+  &rfc9624; 
+  &rfc9658;  
+  &rfc9911;  
+  &I-D.ietf-bier-bier-yang;
+  &I-D.ietf-bier-mld;
+  &I-D.ietf-bier-bierin6;
+  &I-D.ietf-bier-te-yang;
+  &I-D.ietf-bier-pim-signaling;
+  &I-D.ietf-pim-sr-p2mp-policy;
+  &I-D.ietf-mboned-redundant-ingress-failover;
+  &I-D.ietf-lsr-flex-soft-dataplane;
+  &I-D.xz-pim-flex-algo;
+  </references>
+  </back>
+</rfc>
