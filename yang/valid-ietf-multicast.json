@@ -27,7 +27,7 @@
 							  "data-plane":"2"
 							],
 						  "bitstringlength":"256",
-						  "bier-encap-type":"bier-encapsulation-ipv6",
+						  "bier-encap-type":"bier-encapsulation-ipv6"
 						}
 						"neighbor":[
                           "neighbor-address":"198.51.100.20",
