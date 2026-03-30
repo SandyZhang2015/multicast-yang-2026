@@ -13,7 +13,7 @@ You can replace the entire file if you prefer a different format.
 Change the file extension to match the format (.xml for XML, etc...)
 title: "TODO - Your title" abbrev: "TODO - Abbreviation" category: info
 
-docname: draft-ietf-mboned-multicast-yang-16 submissiontype: IETF # also: "independent", "editorial", "IAB", or "IRTF" number: date: consensus: true v: 3 area: AREA workgroup: WG Working Group keyword:
+docname: draft-ietf-mboned-multicast-yang submissiontype: IETF # also: "independent", "editorial", "IAB", or "IRTF" number: date: consensus: true v: 3 area: AREA workgroup: WG Working Group keyword:
 
 next generation
 unicorn
