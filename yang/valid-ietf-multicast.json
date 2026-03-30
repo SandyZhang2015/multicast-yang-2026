@@ -10,7 +10,7 @@
                           "neighbor-address":"198.51.100.10",
                           "vni-type":"tunnel-encap-vxlan",
 						  "signaling":"tunnel-encap-vxlan",
-						  "protocol-type":"mvpn",
+						  "protocol-type":"mvpn"
                           ]
                         }
                       },
@@ -24,15 +24,15 @@
 							"tad":[
 							  "mt-id":"0",
 							  "fa-number":"200",
-							  "data-plane":"2",
+							  "data-plane":"2"
 							]
 						  "bitstringlength":"256",
 						  "bier-encap-type":"bier-encapsulation-ipv6",
 						}
 						"neighbor":[
                           "neighbor-address":"198.51.100.20",
-                          "vni-type":"tunnel-encap-vxlan",
+                          "vni-type":"tunnel-encap-vxlan"
                         ]
                       }
-                    },
+                    }
                 }
